@@ -1,0 +1,666 @@
+/* GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&family=Nanum+Myeongjo&display=swap');
+/* font-family: 'Montserrat', sans-serif;
+font-family: 'Nanum Myeongjo', serif; */
+
+
+body{
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 14px;
+    color:#333;
+}
+/* RESET */
+html{
+    scroll-behavior: smooth;
+}
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+li{list-style: none;}
+a{
+    text-decoration: none;
+    color:inherit;
+}
+img{
+    outline:none;
+}
+button,input{
+    outline: none;
+}
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+    font-weight: normal;
+}
+
+.wrapper{
+    width: 100%;
+    overflow: hidden;
+}
+/* TITLE TEXT  */
+.text .title{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.text p{
+    font-size:45px;
+    line-height: 1.2;
+    margin:40px 0;
+}
+/* hover */
+.text a{
+    display: inline-block;
+    padding:5px 15px;
+    border: 1px solid #333;
+    border-radius: 15px;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.text a:hover{
+    background: #333;
+    color:#fff;
+}
+/* ### HEAEDER ###*/
+header{
+    width: 100%;
+    position: fixed;
+    top:0;
+    left:0;
+    z-index:100;
+    background: #213135;
+    padding:40px 0px 30px 0;
+    color:#fff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.4s;
+}
+header.on{
+    padding:20px 0 18px 0;
+    transition: 0.4s;
+}
+header.on .logo{
+    font-size: 22px;
+    transition: 0.4s;
+}
+header.on .gnb-btn{
+    margin-top: 4px;
+    transition: 0.4s;
+}
+header .inner{
+    width: 90%;
+    margin: 0 auto;
+}
+header .inner .logo{
+    display: inline-block;
+    font-size: 25px;
+    letter-spacing: 1px;
+}
+header .inner .gnb-btn{
+    display: block;
+    float: left;
+    width: 32px;
+    height: 20px;
+    position: relative;
+}
+header .inner .gnb-btn span{
+    background: #fff;
+    width: 100%;
+    height: 3px;
+    left:0;
+    display: block;
+    position: absolute;
+}
+header .inner .gnb-btn span.a{
+    top:0;
+}
+header .inner .gnb-btn span.b{
+    top:50%;
+    transform: translateY(-50%);
+}
+header .inner .gnb-btn span.c{
+    bottom:0;
+}
+header .inner .contact{
+    float: right;
+    display: block;
+}
+/* HEADER GNB */
+nav.gnb{
+    position: absolute;
+    left:-500px;
+    width: 0;
+    top:0;
+    background-color: black;
+    color:#fff;
+    width: 350px;
+    height: 100vh;
+    padding:95px 50px;
+    box-sizing: border-box;
+    text-align-last: left;
+    transition: 0.5s;
+    overflow: hidden;
+}
+nav.gnb ul{
+    position: absolute;
+    width: 60%;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    border-top: 1px solid #555;
+    border-bottom: 1px solid #555;
+    padding:20px 0;
+}
+nav.gnb ul li a{
+    text-align-last: left;
+    line-height: 50px;
+    font-size: 22px;
+}
+nav.gnb ul li a span{
+    text-transform: none;
+    font-family: 'Nanum Myeongjo', serif;
+    font-style: italic;
+    font-size: 20px;
+}
+header.on nav.gnb{
+    width: 300px;
+    transition: 0.5s;
+}
+header.on nav.gnb ul{
+    width: 50%;
+}
+nav.gnb.on{
+    width: 400px;
+    left:0;
+}
+
+/* banner */
+.contents{
+    background: #fff;
+    z-index:1;
+    margin-bottom: 200px;
+}
+.banner{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+.banner .waves{
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: absolute;
+    left:0;
+    top:0;
+}
+.banner .title{
+    width: 100%;
+    position: absolute;
+    left:0;
+    top:50%;
+    transform: translateY(-50%);
+    color:#fff;
+    font-size: 50px;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 70px;
+    font-weight: bold;
+    text-shadow: 0 0 5px rgb(172, 171, 171);
+}
+/* INNER RESET */
+.inner{
+    width: 1400px;
+    margin:0 auto;
+}
+/* ABOUT */
+.about{
+    background: #f2f0eb;
+    padding:100px 0;
+}
+.about .text p{
+    font-size: 45px;
+}
+/* ABOUT US MENU */
+.approach{
+    padding:100px 0;
+}
+.approach .inner{
+    position: relative;
+}
+.approach .inner .list{
+    width: 45%;
+}
+.approach .inner .list li{
+    margin-bottom: 30px;
+}
+.approach .inner .list li a{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.approach .inner .list li a img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+.approach .inner .text_fix{
+    position: absolute;
+    width: 45%;
+    height: 100%;
+    right:0;
+    top:0;
+}
+.approach .inner .text_fix .text{
+    position: absolute;
+    bottom:10%;
+}
+.approach .inner .text_fix .text.on{
+    position: fixed;
+    bottom:50%;
+    transform: translateY(50%);
+    transition: 1s;
+}
+.approach .inner .list li{
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.approach .inner .list li a span{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    color:#fff;
+    font-size: 40px;
+    opacity: 0;
+    transition: 0.5s;
+}
+.approach .inner .list li a:hover span{
+    opacity: 1;
+}
+.approach .inner .list li a:hover img{
+    transform: scale(1.1);
+}
+/* sector */
+.sector{
+    background-color: #f2f0eb;
+    padding:100px 0 230px 0;
+    position: relative;
+    margin-bottom: 250px;
+}
+.sector .list{
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    width: 1400px;
+    left:50%;
+    transform: translateX(-50%);
+    bottom:-150px;
+}
+.sector .list li{
+    width: 30%;
+    overflow: hidden;
+}
+.sector .list li a{
+    display: block;
+    position: relative;
+}
+.sector .list li a img{
+    width: 100%;
+    transition: 0.4s;
+}
+.sector .list li h3{
+    position: absolute;
+    left:50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    color:#fff;
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing:1px;
+    transition: 0.4s;
+}
+.sector .list li a:hover h3{
+    letter-spacing: 3px;
+    font-size: 30px;
+}
+.sector .list li a:hover img{
+    transform: scale(1.1);
+}
+.sector .list.motion li{
+    animation: sectors 1s;
+}
+@keyframes sectors{
+    0%{
+        opacity: 0;
+        transform: translateX(1000px);
+    }
+    20%{
+        opacity: 0;
+        transform: translateX(1000px);
+    }
+}
+
+
+
+/* SERVICE */
+.service{
+    padding:100px 0;
+}
+.service .inner{
+    overflow: hidden;
+}
+.service .inner .img{
+    width: 48%;
+    float: left;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.service .inner .img img{
+    width: 100%;
+    height: 100%;
+}
+.service .text{
+    width: 45%;
+    float: right;
+}
+.service .img.motion{
+    animation:service 1s;
+}
+@keyframes service{
+    0%{
+        opacity: 0;
+        transform: translateX(-500px);
+    }
+    30%{
+        opacity: 0;
+        transform: translateX(-500px);
+    }
+}
+
+/* JOURNAL */
+.journal{
+    background-color: #f2f0eb;
+    padding:350px 0 200px 0;
+    margin-top: -250px;
+    font-family: 'Montserrat', sans-serif;
+}
+.journal h2{
+    font-size: 30px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 100px;
+}
+.journal .list{
+    display: flex;
+    justify-content: space-between;
+}
+.journal .list li{
+    width: 330px;
+}
+.journal .list li a{
+    display: block;
+}
+.journal .list li a .img{
+    border-radius: 10px;
+    overflow: hidden;
+    height: 330px;
+    position: relative;
+}
+.journal .list li a .img img{
+    height: 100%;
+    width:inherit;
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+}
+.journal .list li a h3{
+    font-size: 15px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin:20px 0;
+}
+.journal .list li a p{
+    font-size: 16px;
+    line-height: 1.4;
+}
+.journal .list.motion{
+    animation:journal 1s;
+}
+@keyframes journal{
+    0%{
+        opacity: 0;
+        transform: translateY(300px);
+    }
+    30%{
+        opacity: 0;
+        transform: translateY(300px);
+    }
+}
+.journal .list.motion li:nth-child(2){
+    animation-delay: 0.6s;
+}
+.journal .list.motion li:nth-child(3){
+    animation-duration: 0.8s;
+}
+.journal .list.motion li:nth-child(4){
+    animation-duration: 1s;
+}
+
+/* FOOTER */
+footer{
+    position: fixed;
+    left:0;
+    bottom:0;
+    width: 100%;
+    height: 200px;
+    background-color: #213135;
+    color:#fff;
+    padding:70px 0;
+    box-sizing: border-box;
+    z-index:-1;
+}
+footer .inner{
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Montserrat', sans-serif;
+}
+footer .inner .footer_logo{
+    font-size: 50px;
+    font-weight: bold;
+    cursor: pointer;
+}
+footer .inner .contact{
+    width: 30%;
+    line-height: 1.5;
+    margin-top: 15px;
+}
+footer .inner .sns{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+footer .inner .sns li{
+    margin:0 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.btn-top{
+    font-family:fontawesome;
+    z-index:1000;
+    color:#000;
+    position: fixed;
+    right: 2%;
+    bottom:-8%;
+    font-size: 40px;
+    color:crimson;
+    opacity: 0.5;
+    transition: 0.3s;
+}
+.btn-top.active{
+    bottom:2%;
+}
+
+/* TEXT ANIMATION */
+@keyframes textani{
+    0%{opacity: 0;}
+    30%{opacity: 0;}
+}
+
+.banner .title.motion .char{
+    animation: textani 0.3s cubic-bezier(.5, 0, .5, 1) both;
+ animation-delay: calc(60ms * var(--char-index));
+}
+.text.motion .word{
+    animation: textani 1s cubic-bezier(.5, 0, .5, 1) both;
+    animation-delay: calc(60ms * var(--word-index));
+}
+
+/* RESPONSIVE */
+@media screen and (max-width:1400px){
+    .inner{
+        width: 90%;
+    }
+    .sector .list{
+        width: 90%;
+    }
+    .journal .list li{
+        width: 230px;
+    }
+    .journal .list li a .img{
+        height: 230px;
+    }
+}
+@media screen and (max-width:1024px){
+    .about .inner .text p,
+    .text p{
+        font-size: 26px;
+    }
+    .approach .inner .list li a span{
+        font-size: 23px;
+    }
+    .approach .inner .list{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .approach .inner .list li{
+        width: 48%;
+        margin-bottom: 20px;
+    }
+    .approach .inner .text_fix{
+        display: none;
+    }
+    .sector{
+        padding:100px 0 20%;
+        margin-bottom: 15%;
+    }
+    .sector .inner .list{
+        bottom:-15%;
+    }
+    .journal{
+        padding:25% 0 100px;
+    }
+    .journal .list li{
+        width: 200px;
+    }
+    .journal .list li a .img{
+        height: 200px;
+    }
+}
+@media screen and (max-width:768px){
+    .journal .list li{
+        width: 150px;
+    }
+    .journal .list li a .img{
+        height: 150px;
+    }
+    .banner h2.title{
+        font-size: 60px;
+    }
+    .service .inner .img{
+        width: 100%;
+        margin-bottom: 50px;
+    }
+    .service .inner .text{
+        width: 100%;
+        margin-bottom: 50px;
+    }
+    .service .inner{
+        display: flex;
+        flex-wrap:wrap;
+        flex-direction: column-reverse;
+    }
+    .journal .list{
+        flex-wrap:wrap;
+    }
+    .journal .list li{
+        width: 48%;
+        margin-bottom: 30px;
+    }
+    .journal .list li a .img{
+        height:auto;
+    }
+    .journal .list li a .img img{
+        width: 100%;
+        height:auto;
+        position:static;
+        transform: none;
+    }
+    footer .inner{
+        font-size: 12px;
+    }
+    footer .inner .sns li{
+        margin-right: 10px;
+    }
+    footer .inner .contact{
+        margin-left: 30px;
+    }
+    footer .inner .footer_logo{
+        transform: translateY(20%);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
